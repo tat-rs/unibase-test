@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стать партнёром проекта</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="page">
+  <main class="page__content">
+    <section class="info">
+      <h1>Хотите стать нашими партнерами?</h1>
+      <p>Заполните форму по клику ниже</p>
+      <button>Открыть форму заявки</button>
+    </section>
+  </main>
+  <div class="popup popup_opened">
+    <div class="popup__container">
+      <form class="popup__form form" name="form-member" novalidate>
+        <h2 class="form__title">Стать партнёром проекта</h2>
+        <div class="form__container">
+  
+          <div class="form__fields">
+  
+            <div class="form__items">
+              <label class="form__label">
+                ✱ Название организации
+                <input class="form__input" id="name-organization" type="text" name="name-organization" required> 
+              </label>
+              <span class="form__error"></span>
+            </div>
+            <div class="form__items">
+              <label class="form__label">
+                ✱ Телефон
+                <input class="form__input" id="mobile" type="tel" name="mobile" required> 
+              </label>
+              <span class="form__error"></span>
+            </div>
+            <div class="form__items">
+              <label class="form__label">
+                ✱ E-mail
+                <input class="form__input" id="email" type="text" name="email" required> 
+              </label>
+              <span class="form__error"></span>
+            </div>
+  
+          </div>
+  
+          <div class="form__items">
+            <p class="form__text">✱ Логотип (jpeg, png)</p>
+            <img class="form__logo" src="./images/avatar.jpg" alt="Логотип"> 
+          </div>
+  
+        </div>
+  
+        <div class="form__items">
+          <label class="form__label">
+            ✱ Направление
+            <input class="form__input" id="direction" type="text" name="direction" required>
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="web-site-link" type="url" name="web-site-link">
+            <img src="./assets/web-site.svg" alt="web-site icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="vk-link" type="url" name="vk-link">
+            <img src="./assets/vk.svg" alt="vk icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="ok-link" type="url" name="ok-link">
+            <img src="./assets/ok.svg" alt="ok icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="facebook-link" type="url" name="facebook-link">
+            <img src="./assets/facebook.svg" alt="facebook icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="instagram-link" type="url" name="instagram-link"> 
+            <img src="./assets/instagram.svg" alt="instagram icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            <input class="form__input" id="youtube-link" type="url" name="youtube-link" required>
+            <img src="./assets/youtube.svg" alt="youtube icon">
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__items">
+          <label class="form__label">
+            Руководитель
+            <input class="form__input" id="director" type="text" name="director" required> 
+          </label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__btns">
+          <button class="form__submit" type="submit">Стать партнёром проекта</button>
+          <button class="form__cancel" type="button" aria-label="Отменить заполнение формы">Отменить</button>
+        </div>
+      </form>
+    </div>
+  </div> 
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
+</body>
+</html>
