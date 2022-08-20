@@ -214,6 +214,7 @@
   margin: 0 auto;
   width: 163px;
   height: 163px;
+  z-index: 900;
 }
 
 .logo__icon {
