@@ -10,8 +10,8 @@ let renderedList = initialList; //массив, который будет отр
 let clickBySort = false; //переменная с кликом по заголовку сортировки
 
 // отрисовка данных на страницу
-function renderData (el) {
-  el.forEach((el, i) => {
+function renderData (item) {
+  item.forEach((el, i) => {
     //создали строку с нужными столбцами
     const rowElement = document.createElement('tr');
     const cellElementNumber = document.createElement('td');
