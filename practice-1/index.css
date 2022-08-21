@@ -3,7 +3,7 @@
 
 .page {
   min-width: 320px;
-  font-family: 'Monserat', Arial, Helvetica, sans-serif;
+  font-family: 'PT Sans';
   font-style: normal;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,17 +28,21 @@
 
 .info__title {
   margin: 0 0 30px;
+  font-size: 34px;
+  line-height: 36px;
+  text-align: center;
 }
 
 .info__text {
   margin: 0 auto 170px;
   max-width: max-content;
   font-size: 24px;
+  line-height: 26px;
+  text-align: center;
 }
 
 .button {
   font-family: 'Lato', sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
@@ -78,6 +82,7 @@
   top: 0;
   left: 0;
   right: 0;
+  min-width: 320px;
   box-sizing: border-box;
   padding: 101px 0;
   display: none;
@@ -102,8 +107,7 @@
 
 .form__title {
   margin: 0 0 35px 0;
-  font-family: 'Montserrat';
-  font-style: normal;
+  font-family: 'Monserat', Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 28px;
   line-height: 34px;
@@ -128,11 +132,13 @@
   box-sizing: border-box;
   padding: 22px 40px 8px 16px;
   margin: 0 0 8px 0;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+}
+
+.form__item_without-label {
+  padding: 16px 40px 16px 16px;
 }
 
 .form__select {
@@ -145,6 +151,7 @@
   text-indent: 1px;
   text-overflow: '';
   border: none;
+  cursor: pointer;
 }
 
 .form__select:focus {
@@ -167,17 +174,18 @@
   font-size: 16px;
   line-height: 24px;
   border: none;
+  position: relative;
 }
 
 .form__input_type_file {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 1px;
-    min-height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  min-height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .form__input:focus {
@@ -185,8 +193,6 @@
 }
 
 .form__text {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -194,14 +200,12 @@
 }
 
 .form__logo {
-  width: 175px;
+  width: 163px;
 }
 
 .logo__desc {
   margin: 0 auto 7px;
   width: fit-content;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -253,8 +257,14 @@
   right: 0;
   bottom: 0;
   border-radius: 50%;
-  display: none;
   background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .2s, opacity .2s ease-in-out;
 }
 
 .hover__icon {
@@ -265,8 +275,6 @@
 .hover__text {
   max-width: 80px;
   margin: 0;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -276,10 +284,8 @@
 }
 
 .logo__container:hover .hover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  visibility: visible;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -288,7 +294,7 @@
   width: 18px;
   max-height: 18px;
   position: absolute;
-  top: 20px;
+  top: 22px;
   right: 15px;
 }
 
@@ -324,8 +330,6 @@
   width: min-content;
   align-self: center;
   background-color: transparent;
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -336,4 +340,77 @@
 
 .form__cancel:hover {
   color: #246df3;
+}
+
+@media (max-width: 790px) {
+
+  .page__content {
+    max-width: calc(100% - 20px);
+  }
+
+  .info__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  
+  .info__text {
+    margin: 0 auto 100px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .popup_opened {
+    padding: 60px 0;
+  }
+
+  .popup__container {
+    max-width: calc(100% - 50px);
+    padding: 35px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .popup_opened {
+    padding: 20px 0;
+  }
+
+  .popup__container {
+    max-width: calc(100% - 20px);
+    padding: 25px;
+  }
+
+  .form__title {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .form__container {
+    flex-direction: column-reverse;
+  }
+
+  .form__fields {
+    margin: 0;
+  }
+
+  .form__logo {
+    margin: 0 0 32px;
+    width: 153px;
+  }
+
+  .logo__container {
+    width: 153px;
+    height: 153px;
+  }
+
+  .form__input {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .button {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }

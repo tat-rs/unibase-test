@@ -1,12 +1,3 @@
-//передаваемый объект настроек всех нужных классов и селекторов элементов 
-const validationConfig = { 
-  formSelector: '.form', 
-  inputSelector: '.form__item', 
-  submitButtonSelector: '.form__button', 
-  inactiveButtonClass: 'form__button_disabled', 
-  inputErrorClass: 'form__item_state_invalid', 
-};
-
 const form = document.querySelector('.form');
 const submitButton = form.querySelector('.form__submit');
 

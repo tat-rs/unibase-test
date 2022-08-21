@@ -27,7 +27,12 @@
               <label class="form__label" for="name-organization">
                 <span class="form__required-icon">✱</span> Название организации
               </label>
-              <input class="form__input" id="name-organization" type="text" name="name-organization" required>
+              <input
+                class="form__input"
+                id="name-organization"
+                type="text"
+                name="name-organization"
+                required>
             </div>
             <span class="form__error name-organization-error"></span>
             <div class="form__item">
@@ -39,7 +44,7 @@
                 id="mobile"
                 type="tel"
                 name="mobile"
-                pattern = "[0-9]{11}"
+                pattern = "7[0-9]{10}"
                 title="Введите номер телефона в формате: 7 XXX XXX XX XX"
                 required>
             </div>
@@ -66,7 +71,7 @@
             <label class="logo__container" for="image">
               <img class="logo__icon" src="./assets/Ellipse 44.png" alt="Логотип">
               <button class="clear">
-                <img class="clear__icon" src="./assets/close.svg" alt="Удалить логотип" />
+                <img class="clear__icon" src="./assets/close.svg" alt="Удалить логотип">
               </button>
               <input
                 class="form__input_type_file"
@@ -76,7 +81,7 @@
                 accept="image/jpeg, image/png"
                 required>
               <div class="hover">
-                <img class="hover__icon" src="./assets/hover.svg" alt="Логотип"/>
+                <img class="hover__icon" src="./assets/hover.svg" alt="Логотип">
                 <p class="hover__text">Выберите файл</p>
               </div>
             </label>
@@ -88,15 +93,16 @@
           <label class="form__label" for="direction">
             <span class="form__required-icon">✱</span> Направление
           </label>
-          <select class="form__select" id="direction" type="text" name="direction" required>
-            <option value="ibm">IBM Plex Serif</option>
-            <option value="ubuntu">Ubuntu</option>
-            <option value="istok">Istok Web</option>
+          <select
+            class="form__select" id="direction" type="text" name="direction" required>
+            <option value="ecology">Экология</option>
+            <option value="finance">Финансы</option>
+            <option value="design">Дизайн</option>
           </select>
           <img class="form__icon form__icon_small" src="./assets/select.svg" alt="select icon">
         </div>
         <span class="form__error direction-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="web-site-link"></label>
           <input
             class="form__input"
@@ -107,7 +113,7 @@
           <img class="form__icon" src="./assets/web-site.svg" alt="web-site icon">
         </div>
         <span class="form__error web-site-link-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="vk-link"></label>
           <input
             class="form__input"
@@ -118,7 +124,7 @@
           <img class="form__icon" src="./assets/vk.svg" alt="vk icon">
         </div>
         <span class="form__error vk-link-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="ok-link"></label>
           <input
             class="form__input"
@@ -126,10 +132,10 @@
             type="url"
             title="Введите адрес сайт начиная с http://"
             name="ok-link">
-          <img class="form__icon form__icon_small" src="./assets/ok.svg" alt="ok icon">
+          <img class="form__icon" src="./assets/ok.svg" alt="ok icon">
         </div>
         <span class="form__error ok-link-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="facebook-link"></label>
           <input
             class="form__input"
@@ -140,7 +146,7 @@
           <img class="form__icon" src="./assets/facebook.svg" alt="facebook icon">
         </div>
         <span class="form__error facebook-link-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="instagram-link"></label>
           <input
             class="form__input"
@@ -151,7 +157,7 @@
           <img class="form__icon" src="./assets/instagram.svg" alt="instagram icon">
         </div>
         <span class="form__error instagram-link-error"></span>
-        <div class="form__item">
+        <div class="form__item form__item_without-label">
           <label class="form__label" for="youtube-link"></label>
           <input
             class="form__input"

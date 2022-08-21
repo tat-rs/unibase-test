@@ -5,6 +5,13 @@ const popupCloseBtn = document.querySelector(".form__cancel");
 
 //объявление функции открытия попапа
 function openPopup() {
+  const form = document.querySelector('.form');
+  const inputList = Array.from(form.querySelectorAll('.form__input'));
+  const submitBtn = form.querySelector('.form__submit');
+  inputList.forEach((input) => {
+    input.value = '';
+  })
+  submitBtn.disabled = 'disabled';
   popup.classList.add("popup_opened"); //присваиваем класс модификатора popup_opened
   window.addEventListener("keydown", closePopupByEsc); //присваиваем обработчик закрытия
   popup.addEventListener("mousedown", closePopupByOverlayClick); //присваиваем обработчик закрытия попапа по оверлею
