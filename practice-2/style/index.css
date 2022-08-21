@@ -1,0 +1,36 @@
+.page {
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.page__content {
+  padding: 80px 40px;
+}
+
+.table {
+  width: 700px;
+	margin: 0 auto 20px;
+	border: 15px solid #F2F8F8;
+	border-top: 5px solid #F2F8F8;
+	border-collapse: collapse; 
+}
+
+.table__row {
+  font-weight: bold;
+	padding: 5px;
+	background: #F2F8F8;
+	border: none;
+	border-bottom: 5px solid #F2F8F8;
+}
+
+.table__title {
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+.table__column {
+  padding: 5px;
+	border: none;
+	border-bottom: 5px solid #F2F8F8;
+}
