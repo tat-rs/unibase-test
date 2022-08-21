@@ -12,20 +12,17 @@ function openPopup() {
     input.value = '';
   })
   submitBtn.disabled = 'disabled';
-  popup.classList.add("popup_opened"); //присваиваем класс модификатора popup_opened
-  window.addEventListener("keydown", closePopupByEsc); //присваиваем обработчик закрытия
-  popup.addEventListener("mousedown", closePopupByOverlayClick); //присваиваем обработчик закрытия попапа по оверлею
+  popup.classList.add("popup_opened");
+  window.addEventListener("keydown", closePopupByEsc);
+  popup.addEventListener("mousedown", closePopupByOverlayClick);
 }
 
-//функция закрытия попапа по кнопке esc
 function closePopupByEsc(evt) {
-  //если событие esc, то попап закрывается
   if (evt.key === "Escape") {
     closePopup(popupOpened);
   }
 }
 
-//функция закрытия попапа при нажатии на оверлей
 function closePopupByOverlayClick(evt) {
   if (evt.target === evt.currentTarget) {
     closePopup(popupOpened);
@@ -34,9 +31,9 @@ function closePopupByOverlayClick(evt) {
 
 //объявление функции закрытия попапа
 function closePopup() {
-  popup.classList.remove("popup_opened"); //удаляем класс модификатора popup_opened
-  window.removeEventListener("keydown", closePopupByEsc); //удаляем обработчик закрытия
-  popup.removeEventListener("mousedown", closePopupByOverlayClick); //удаляем обработчик закрытия попапа по оверлею
+  popup.classList.remove("popup_opened");
+  window.removeEventListener("keydown", closePopupByEsc);
+  popup.removeEventListener("mousedown", closePopupByOverlayClick);
 }
 
 popupOpenBtn.addEventListener("click", openPopup);

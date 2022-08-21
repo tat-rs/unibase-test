@@ -1,16 +1,14 @@
 const form = document.querySelector('.form');
 const submitButton = form.querySelector('.form__submit');
 
-//показать ошибку 
 const showError = (errorElement, inputElement) => {
   if(inputElement.title) {
     errorElement.textContent = inputElement.title;
   } else {
     errorElement.textContent = inputElement.validationMessage; //присвоили стандратный текст ошибки 
   }
-} 
+}
 
-//скрыть ошибку 
 const hideError = (errorElement) => { 
   errorElement.textContent = ''; //удалили стандратный текст ошибки
 }; 
@@ -28,8 +26,7 @@ const checkInputValidity = (inputElement) => {
 } 
 
 //проверка валидности воля ввода 
-const hasInvalidInput = (inputList) => { 
-  //перебор каждого элемента массива на валидность 
+const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => { 
     return !inputElement.validity.valid; //возвращает true, если поле невалидно 
   }); 
@@ -37,7 +34,6 @@ const hasInvalidInput = (inputList) => {
 
 //включение и отключение кнопки в зависимости от валидности формы 
 const toggleButtonState = (inputList) => { 
-  // Если есть хотя бы одно поле ввода невалидно 
   if (hasInvalidInput(inputList)) { 
     submitButton.disabled = 'disabled'; 
   } else { 
@@ -47,20 +43,19 @@ const toggleButtonState = (inputList) => {
 
 //устанавливаем обработчик полям ввода формы
 const setEventListener = () => { 
-  const inputList = Array.from(form.querySelectorAll('.form__input')); //находм все поля вводы формы в передаваемой форме и создаем массив 
+  const inputList = Array.from(form.querySelectorAll('.form__input')); 
   toggleButtonState(inputList); 
 
   inputList.forEach((inputElement) => { 
     inputElement.addEventListener('input', () => { 
       checkInputValidity(inputElement); 
-      toggleButtonState(inputList); // Вызовем toggleButtonState и передадим ей массив полей и кнопку 
+      toggleButtonState(inputList); 
     });
   }); 
 
-  //отменяем действия по умолчанию 
   form.addEventListener('submit', (evt) => { 
     evt.preventDefault(); 
   });
 }; 
 
-setEventListener()
+setEventListener();
